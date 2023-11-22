@@ -9,9 +9,9 @@ import { AuthGuard } from './services/auth.guard';
 import { SubscribersComponent } from './subscribers/subscribers.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, canActivate:[AuthGuard] },
-  { path: 'login', component: LoginComponent },
 
+  { path: 'login', component: LoginComponent },
+  { path: '', component: DashboardComponent, canActivate:[AuthGuard] },
   { path: 'categories', component: CategoriesComponent, canActivate:[AuthGuard] },
 
   { path: 'posts', component: AllPostComponent, canActivate:[AuthGuard] },
